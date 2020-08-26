@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Press+Start+2P&family=Ubuntu&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: pink;
+   background: rgba(0,0,0,0.7) url(../aboutus/background.png);
+
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.team{
+  position: relative;
+  font-family: sans-serif;
+  /* font-family: 'Press Start 2P', cursive; */
+  font-size: 50px;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 6s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  text-align: center;
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+.card {
+  text-align: center;
+  width: 320px;
+  background-color: rgb(206, 204, 204);
+  border-radius: 5px;
+  padding: 30px;
+  position: relative;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.card:hover {
+  background-color: rgb(172, 209, 240);
+  /* background: rgba(0,0,0,0.7) url(../aboutus/PATTERN-1.png); */
+}
+
+img {
+  border-radius: 50%;
+  width: 160px;
+  height: auto;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.person-name {
+  margin-top: 70px;
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+.designation {
+  font-size: 18px;
+  padding: 4px;
+}
+
+p {
+  margin-top: 30px;
+  font-size: 22px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  background-color: rgba(0, 0, 255, 0.5);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 300ms;
+}
+
+.social-icons a:hover {
+  background-color: blue;
+}
+
+.social-icons a i {
+  color: white;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 1300px) {
+  .card {
+    flex-basis: 40%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .card {
+    flex-basis: 80%;
+    margin-top: 100px;
+  }
+}
